@@ -1,38 +1,166 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&display=swap');
+body{
+    background-color: rgb(14, 13, 13);
+    color: white;
+    font-family: 'DM SANS', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header{
+    height: 40vh;
+    width: 100%;
+    background:url("https://static.vecteezy.com/system/resources/previews/027/473/713/non_2x/coffee-shop-with-large-windows-looking-out-into-the-groove-lofi-world-photo.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    z-index: -1;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.centered{
+    display: grid;
+    place-items: center;
+    margin: 25px;
+}
+main{
+    background-color: rgb(27, 27, 27);
+    width: 80vw;
+    min-height: 85vh;
+    height: fit-content;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+main h1{
+    padding-top: 50px;
+    font-weight: 400;
+}
+main p{
+    color: gray;
+    padding-left: 250px;
+    padding-right: 250px;
+    text-wrap: pretty;
+}
+.line{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.unselected{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-family: 'DM SANS', sans-serif;
+    font-weight: 900;
+    border-radius: 10px;
+    padding: 10px;
+    transition: 150ms;
+}
+.line button:hover{
+    background-color: #6F757C;
+    transition: 150ms;
+    cursor: pointer;
+}
+.selected{
+    background-color: #6F757C;
+    border: none;
+    color: white;
+    font-family: 'DM SANS', sans-serif;
+    font-weight: 900;
+    border-radius: 10px;
+    padding: 10px;
+    transition: 150ms;
+}
+.grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding-left: 200px;
+    padding-right: 200px;
+    gap: 40px;
+}
+.card{
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.card h1{
+    font-size: 18px;
+    margin: 0;
+    position: relative;
+    text-align: left;
+    top: 0;
+    padding: 0;
+    padding-top: 10px;
+}
+.card h2{
+    font-size: 12px;
+    padding: 5px;
+    background-color: rgb(123, 240, 176);
+    color: black;
+    border-radius: 5px;
+}
+.card h3{
+    text-align: left;
+    font-size: 13px;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+}
+.votes{
+    font-size: 12px;
+    color: #5f6366;
+}
+.coffeecard{
+    width: 250px;
+    height: 160px;
+    border-radius: 10px;
+    margin: 0 auto;
+    z-index: -1;
+    box-shadow: transparent;
+    transition: 300ms;
+    object-fit: cover;
+}
+.coffeecard:hover{
+    box-shadow: 0 0 15px black;
+    transition: 300ms;
+}
+@media only screen and (max-width: 600px) {
+    .grid{
+        display: block;
+        margin-top: 50px;
+    }
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  @media only screen and (max-width: 1280px) {
+    .grid{
+        grid-template-columns: auto auto;
+        margin-top: 50px;
+    }
   }
-  to {
-    transform: rotate(360deg);
-  }
+.popular{
+    position: absolute;
+    background-color: rgb(228, 228, 83);
+    border-radius: 20px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 12px;
+    width: 60px;
+    font-weight: 900;
+    text-align: center;
+    color: black;
+    aspect-ratio: 7/1;
+    left: auto;
+    z-index: 1;
 }
+.hide{
+    display: none;
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.soldout{
+    color: rgb(233, 64, 64);
+    font-size: 14px;
+    padding: 0;
+    margin:0;
+}
+
