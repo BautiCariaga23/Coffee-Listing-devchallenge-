@@ -27,7 +27,12 @@ function App() {
       </div>
       <div className='grid'>
         {list.list.map((el)=>{
-          return <CoffeeCard ratings = {el.ratings} soldout = {el.soldout} rate = {el.rate} votes = {el.votes} image = {el.image} popular = {el.popular} name = {el.name} price = {el.price}></CoffeeCard>
+          if(buttonSelected == 1 && !el.soldout){
+            return <CoffeeCard ratings = {el.ratings} soldout = {el.soldout} rate = {el.rate} votes = {el.votes} image = {el.image} popular = {el.popular} name = {el.name} price = {el.price}></CoffeeCard>
+          }else if(buttonSelected == 0){
+            return <CoffeeCard ratings = {el.ratings} soldout = {el.soldout} rate = {el.rate} votes = {el.votes} image = {el.image} popular = {el.popular} name = {el.name} price = {el.price}></CoffeeCard>
+          }
+          
         })}
       </div>
     </main>
